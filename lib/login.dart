@@ -15,17 +15,16 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
- const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
- // TODO: Add text editing controllers (101)
- final _usernameController = TextEditingController();
- final _passwordController = TextEditingController();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // TODO: Add text editing controllers (101)
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,20 +41,17 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             const SizedBox(height: 120.0),
-            // TODO: Add TextField widgets (101)
-             // [Name]
+            // TODO: Wrap Username with AccentColorOverride (103)
+            // TODO: Remove filled: true values (103)
             TextField(
-              // TODO: Add TextField widgets (101)
-// [Name]
               controller: _usernameController,
               decoration: const InputDecoration(
                 filled: true,
                 labelText: 'Username',
               ),
             ),
-// spacer
             const SizedBox(height: 12.0),
-// [Password]
+            // TODO: Wrap Password with AccentColorOverride (103)
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
@@ -64,15 +60,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               obscureText: true,
             ),
-            // TODO: Add button bar (101)
             ButtonBar(
-              // TODO: Add a beveled rectangular border to CANCEL (103)
               children: <Widget>[
-                // TODO: Add buttons (101)
+                // TODO: Add a beveled rectangular border to CANCEL (103)
                 TextButton(
                   child: const Text('CANCEL'),
                   onPressed: () {
-                    // TODO: Clear the text fields (101)
                     _usernameController.clear();
                     _passwordController.clear();
                   },
@@ -82,19 +75,11 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   child: const Text('NEXT'),
                   onPressed: () {
-                    // TODO: Show the next page (101)
                     Navigator.pop(context);
                   },
                 ),
-                // TODO: Add buttons (101)
-
               ],
             ),
-            // TODO: Wrap Username with AccentColorOverride (103)
-            // TODO: Remove filled: true values (103)
-            // TODO: Wrap Password with AccentColorOverride (103)
-            // TODO: Add TextField widgets (101)
-            // TODO: Add button bar (101)
           ],
         ),
       ),
